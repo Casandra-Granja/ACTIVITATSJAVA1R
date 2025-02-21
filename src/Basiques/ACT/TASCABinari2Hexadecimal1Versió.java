@@ -2,7 +2,7 @@ package Basiques.ACT;
 
 import java.util.Scanner;
 
-public class TASCABinariHexadecimal {
+public class TASCABinari2Hexadecimal1Versió {
     public static void main(String[] args) {
         /*
         VARIABLES

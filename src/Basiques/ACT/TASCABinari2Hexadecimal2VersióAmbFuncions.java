@@ -2,7 +2,7 @@ package Basiques.ACT;
 
 import java.util.Scanner;
 
-public class TASCAbinaritohexaENTREGAR {
+public class TASCABinari2Hexadecimal2VersióAmbFuncions {
 
         public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
