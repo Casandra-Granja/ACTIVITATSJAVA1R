@@ -8,26 +8,25 @@ public class TASCAbinaritohexaENTREGAR {
             Scanner input = new Scanner(System.in);
             System.out.print("Inserte el número en binario: ");
             long nb = input.nextLong();
-            String nh = convertirABinarioHexadecimal(nb);
+            String nh = convertirABinariHexadecimal(nb);
 
             System.out.printf("El número en binario %d es el número %s en hexadecimal\n", nb, nh);
         }
 
-        //dfghjcfghjhfghj
 
-        public static String convertirABinarioHexadecimal(long nb) {
+        public static String convertirABinariHexadecimal(long nb) {
             String nh = "";
             while (nb > 0) {
                 long rnb = nb % 10000;
                 nb /= 10000;
 
-                int nd = convertirGrupoDecimal(rnb);
+                int nd = convertirGrupo4Decimal(rnb);
                 nh = obtenerHexadecimal(nd) + nh;
             }
             return nh;
         }
 
-        public static int convertirGrupoDecimal(long rnb) {
+        public static int convertirGrupo4Decimal(long rnb) {
             int pos = 0;
             int nd = 0;
             while (rnb > 0) {
