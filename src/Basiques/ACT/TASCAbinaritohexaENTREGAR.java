@@ -13,6 +13,8 @@ public class TASCAbinaritohexaENTREGAR {
             System.out.printf("El número en binario %d es el número %s en hexadecimal\n", nb, nh);
         }
 
+        //dfghjcfghjhfghj
+
         public static String convertirABinarioHexadecimal(long nb) {
             String nh = "";
             while (nb > 0) {
