@@ -15,9 +15,7 @@ public class ContarAs {
             return 0;
         } else {
             String P1 = P.substring(0, P.length() / 2);
-            System.out.println(P1);
             String P2 = P.substring(P.length() / 2, P.length());
-            System.out.println(P2);
             return contarAs(P1) + contarAs(P2);
         }
     }
