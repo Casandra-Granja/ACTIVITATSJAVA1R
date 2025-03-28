@@ -1,4 +1,4 @@
-package Poo.Alumne.Profes;
+package Poo.Profes;
 
 public class Profesor {
 

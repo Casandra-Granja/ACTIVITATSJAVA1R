@@ -1,4 +1,4 @@
-package Poo.Alumne.Cotxes;
+package Poo.Cotxes;
 
 public class Cotxes {
     //Propietats o atributs

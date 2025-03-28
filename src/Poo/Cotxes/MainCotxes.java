@@ -1,4 +1,4 @@
-package Poo.Alumne.Cotxes;
+package Poo.Cotxes;
 
 public class MainCotxes {
     public static void main(String[] args) {
