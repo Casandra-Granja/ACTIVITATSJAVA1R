@@ -10,13 +10,13 @@ public class Punt2D {
     String nom;
 
     //Constructors
-    Punt2D(){
+    public Punt2D(){
         this.x=0;
         this.y=0;
         this.nom= "O";
     }
 
-    Punt2D(String nom, float x, float y){
+    public Punt2D(String nom, float x, float y){
         this.nom= nom;
         this.x= x;
         this.y= y;
@@ -32,13 +32,13 @@ public class Punt2D {
 
     //Getters (Accesores)
 
-    String getNom(){ return this.nom; }
-    float getX(){ return this.x; }
+    public String getNom(){ return this.nom; }
+    public float getX(){ return this.x; }
     public float getY() { return this.y; }
 
     //Altres
 
-    void display(PApplet p5){
+    public void display(PApplet p5){
         p5.fill(255,0,0);
         p5.circle(this.x,this.y,30);
         p5.text(this.nom,x+30,this.y);
