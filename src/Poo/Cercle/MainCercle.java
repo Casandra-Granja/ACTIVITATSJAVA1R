@@ -33,6 +33,9 @@ public class MainCercle extends PApplet {
         c1.display(this);
         c2.display(this);
 
+        float r = dist(c2.getCentre().getX(), c2.getCentre().getY(), mouseX- width/2,  mouseY-height/2);
+        c2.setRadi(r);
+
     }
     public void mousePressed(){
 
