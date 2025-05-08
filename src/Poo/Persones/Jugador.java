@@ -3,7 +3,7 @@ package Poo.Persones;
 public class Jugador extends Persona{
 
     int gols;
-    enum POSICIO{DEVANTER, MIG, DEFENSA, PORTER};
+    enum POSICIO{DAVANTER, MIG, DEFENSA, PORTER};
     String nomEquip;
     POSICIO posicio;
 
