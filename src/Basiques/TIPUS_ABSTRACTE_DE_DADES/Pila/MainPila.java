@@ -1,3 +1,5 @@
+package Basiques.TIPUS_ABSTRACTE_DE_DADES.Pila;
+
 import processing.core.PApplet;
 
 public class MainPila extends PApplet {
@@ -7,7 +9,7 @@ public class MainPila extends PApplet {
     int lastPopped= -1;
 
     public static void main(String[] args) {
-        PApplet.main("MainPila");
+        PApplet.main("Basiques.TIPUS_ABSTRACTE_DE_DADES.Pila.Pila.MainPila");
     }
 
     public void settings(){
