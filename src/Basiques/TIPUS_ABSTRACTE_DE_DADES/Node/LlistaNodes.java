@@ -65,7 +65,6 @@ public class LlistaNodes {
         return tail.valor;
     }
 
-
     public int getElementAt(int i){
         if (i<numNodes){
             int k= 0;
@@ -103,6 +102,59 @@ public class LlistaNodes {
 
         }
     }
+
+    public int removeAt(int p){
+        if(!isEmpty() && p<numNodes){
+            int k= 0;
+            Node nodeAnt= head;
+            while(k<p-1){
+                nodeAnt= nodeAnt.seg;
+                k++;
+            }
+            int v= -1;
+            if(numNodes> 1){
+                Node n= nodeAnt.seg;
+                v= n.valor;
+            }
+            else{
+                v = nodeAnt.valor;
+                tail= null;
+                head = null;
+            }
+            numNodes--;
+            return v;
+        }
+        return -1;
+
+    }
+    public int removeFirst(){
+        if(!isEmpty()){
+            int v= head.valor;
+            Node nodePrimer= head;
+            head = nodePrimer.seg;
+            return v;
+
+        }
+        else{
+            return -1;
+        }
+    }
+
+    public int removeLast(){
+        if(!isEmpty()){
+            int k=0;
+            Node nAnt= head;
+            while(k<numNodes-1){
+                nAnt= nAnt.seg;
+                k++;
+            }
+            int v= nAnt.seg.valor;
+            nAnt.seg= null;
+            return v;
+        }
+        return -1;
+    }
+
     // Dibuixa la llista de nodes a la posició (x, y) i amb mida de node wn
     void display(PApplet p5, int x, int y, int wn) {
 
