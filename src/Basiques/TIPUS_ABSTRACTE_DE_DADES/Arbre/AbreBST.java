@@ -1,0 +1,97 @@
+package Basiques.TIPUS_ABSTRACTE_DE_DADES.Arbre;
+
+
+import processing.core.PApplet;
+
+public class AbreBST {
+
+    NodeBST arrel;
+
+    public AbreBST(){
+        this.arrel= null;
+    }
+    public AbreBST(int n){
+        this.arrel= new NodeBST(n);
+    }
+
+
+    public boolean isEmpty(){
+        return this.arrel== null;
+    }
+
+
+    public void addElement(int n){
+        if(isEmpty()){
+            this.arrel = new NodeBST(n);
+        }
+        else{
+            NodeBST pare = this.arrel;
+            while((pare.esq!=null && n<pare.valor) || (pare.dret!= null && n>pare.valor)){
+                if(n<pare.valor){
+                    pare = pare.esq;
+                }
+                else{
+                    pare = pare.dret;
+                }
+
+            }
+            if (n< pare.valor){
+                pare.esq= new NodeBST(n);
+            }
+            else{
+                pare.dret = new NodeBST(n);
+            }
+        }
+    }
+
+    public boolean cercaElement(int valor, NodeBST n){
+        if(n== null){
+            return false;
+        }else if (n.valor== valor){
+            return true;
+        }
+        else{
+            if(valor < n.valor && n.esq!=null){
+                return cercaElement(n.valor, n.esq);
+
+            }
+            else if( valor> n.valor && n.dret!= null){
+                return cercaElement(n.valor, n.dret);
+            }
+        }
+        return false;
+    }
+
+    public int getMinim(){
+        NodeBST pare = this.arrel;
+        while(pare.esq!= null){
+            pare = pare.esq;
+        }
+        return pare.valor;
+    }
+
+    public int getMaxim(){
+        NodeBST pare = this.arrel;
+        while(pare.dret!= null){
+            pare = pare.dret;
+        }
+        return pare.valor;
+    }
+
+    void display(PApplet p5, NodeBST n, float x, float y, float r, int level){
+
+        float dx = (p5.width/3)/(level+2);
+        n.display(p5,x, y, r, level);
+
+        if(n.esq != null){
+            display(p5,n.esq, x-dx, y + 2*r, r, level +1);
+        }
+
+        if(n.dret != null){
+            display(p5, n.dret, x+dx, y + 2*r, r, level +1);
+        }
+    }
+
+
+
+}
